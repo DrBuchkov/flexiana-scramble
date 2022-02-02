@@ -1,0 +1,9 @@
+{:deps   {:aliases [:cljs]}
+ :nrepl  {:port 7002}
+ :builds {:app {:target     :browser
+                :modules    {:base {:entries [com.flexiana.app]}}
+                :output-dir "public/js/compiled"
+                :asset-path "/js/compiled"
+                :devtools   {:http-root  "public"
+                             :http-port  8700
+                             :after-load com.flexiana.app/reload!}}}}
